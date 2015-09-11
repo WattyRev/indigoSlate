@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="slate">
     <head>
         <link rel="stylesheet" href="style.css" />
 
@@ -7,7 +7,21 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
     </head>
-    <body>
-
+    <body ng-controller="slateMain">
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="row" ng-repeat="row in items" ng-style="{'margin-top': verticalMargin, 'margin-bottom': verticalMargin}">
+                <div class="item" ng-repeat="item in row" ng-style="{'background-color': item, 'width': getWidth(row.length)}">
+                    <div class="buffer"></div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
