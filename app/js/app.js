@@ -12,7 +12,11 @@ app.controller('slateMain', ['$scope', '$rootScope', '$timeout', function($scope
 
     //Functions
         $scope.getWidth = function(rowLength) {
-            return (100 / rowLength - 2) + '%';
+            if($(window).width() < 1025) {
+                return '90%';
+            } else {
+                return (100 / rowLength - 2) + '%';
+            }
         };
         $scope.onResize = function() {
             $scope.setMarginY(true);

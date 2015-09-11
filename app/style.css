@@ -56,3 +56,34 @@ nav:hover + main {
     height: 0;
     padding-bottom: 55%;
 }
+
+@media only screen and (max-width : 1024px) {
+    nav ul {
+        display:none;
+    }
+    nav {
+        float: none;
+        width: 100%;
+        position:fixed;
+        top:0;
+        left:0;
+        height: 50px;
+    }
+    nav:hover {
+        width: 100%;
+    }
+    main {
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 50px;
+        height: auto;
+    }
+    nav:hover + main {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .item {
+        margin: 5%;
+    }
+
+}
