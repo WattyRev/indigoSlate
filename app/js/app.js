@@ -3,7 +3,6 @@ app.run(['$rootScope', function($root) {}]);
 
 app.controller('slateMain', ['$scope', '$rootScope', '$timeout', function($scope, $root, $timeout) {
     //variables
-        $scope.aspectRatio = {x:16,y:9};
         $scope.items = [
             ['red', 'orange', 'yellow'],
             ['green', 'blue', 'purple', 'brown'],
